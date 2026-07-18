@@ -178,7 +178,6 @@ async def on_startup(app: Application):
     scheduler.add_job(send_due_reminders, "cron", hour=9, minute=0, args=[app])
     scheduler.start()
     log.info("Scheduler ishga tushdi — har kuni 09:00 da eslatmalar yuboriladi.")
-  await send_due_reminders(app)
 
 
 def main():
